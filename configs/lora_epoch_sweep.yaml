@@ -1,0 +1,24 @@
+# 同一次 6-epoch 训练中保存 epoch 1/3/6 等快照用于对照。
+model_path: /data/shuaiz/models/Qwen2.5-0.5B-060db6499f32faf8b98477b0a26969ef7d8b9987
+train_file: data/processed/train_tokenized.jsonl
+validation_file: data/processed/validation_tokenized.jsonl
+output_dir: outputs/lora/epoch_sweep_6epoch
+report_path: reports/lora_training_epoch_sweep.md
+seed: 2026
+max_length: 512
+num_train_epochs: 6
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 0.0002
+weight_decay: 0.01
+warmup_ratio: 0.1
+max_grad_norm: 1.0
+scheduler: cosine
+optimizer: AdamW
+bf16: true
+save_epoch_checkpoints: true
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]

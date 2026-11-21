@@ -1,0 +1,28 @@
+# QLoRA: 单卡 4-bit NF4，保留 Base 权重并只训练 LoRA adapter。
+model_path: /data/shuaiz/models/Qwen2.5-0.5B-060db6499f32faf8b98477b0a26969ef7d8b9987
+train_file: data/processed/train_tokenized.jsonl
+validation_file: data/processed/validation_tokenized.jsonl
+output_dir: outputs/qlora/experiment_001
+report_path: reports/qlora_training_report.md
+seed: 2026
+max_length: 512
+num_train_epochs: 3
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 0.0002
+weight_decay: 0.01
+warmup_ratio: 0.1
+max_grad_norm: 1.0
+scheduler: cosine
+optimizer: AdamW
+bf16: true
+quantization:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_compute_dtype: bfloat16
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]

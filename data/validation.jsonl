@@ -1,0 +1,30 @@
+{"messages": [{"role": "user", "content": "如何合并两个字典并让后者覆盖同名键？"}, {"role": "assistant", "content": "Python 3.9 及以上可写 `merged = first | second`；也可用 `{**first, **second}`。后出现的字典值会覆盖同名键。"}]}
+{"messages": [{"role": "user", "content": "报告平均数时为什么有时还应报告标准差？"}, {"role": "assistant", "content": "均值描述中心位置，标准差描述数据离散程度。只报均值可能掩盖样本间差异或不稳定性。"}]}
+{"messages": [{"role": "user", "content": "模型参数和超参数有什么区别？"}, {"role": "assistant", "content": "参数由训练算法从数据中学习，例如神经网络权重；超参数由开发者设定，例如学习率、批量大小和 LoRA rank。"}]}
+{"messages": [{"role": "user", "content": "训练损失下降能证明模型更有用吗？"}, {"role": "assistant", "content": "不能。训练损失下降只说明模型更贴合训练目标；还要看独立验证或测试表现、指令遵循和错误类型，避免把记忆训练样本当作能力提升。"}]}
+{"messages": [{"role": "user", "content": "线性查找的基本做法是什么？"}, {"role": "assistant", "content": "从头到尾逐个比较元素与目标值，找到后返回位置；遍历结束仍未找到则报告不存在。时间复杂度为 O(n)。"}]}
+{"messages": [{"role": "user", "content": "提取书名、作者和年份：李青在 2021 年出版《河岸观察》。"}, {"role": "assistant", "content": "书名：《河岸观察》；作者：李青；年份：2021 年。"}]}
+{"messages": [{"role": "user", "content": "把 0.375 写成最简分数。"}, {"role": "assistant", "content": "0.375=375/1000，分子分母同除以 125，得到 3/8。"}]}
+{"messages": [{"role": "user", "content": "求 1 到 n 的和，直接循环的时间复杂度是多少？"}, {"role": "assistant", "content": "逐项累加需要处理 n 个数，时间复杂度是 O(n)，额外空间可为 O(1)。"}]}
+{"messages": [{"role": "user", "content": "温度计每次都高读 2℃，这是随机误差还是系统误差？"}, {"role": "assistant", "content": "这是系统误差，因为偏差方向和大小稳定。应校准仪器并记录修正方法。"}]}
+{"messages": [{"role": "user", "content": "快递状态为“已到站，待取件”，能否判断已送到收件人家中？"}, {"role": "assistant", "content": "不能。状态表示包裹到达取件站并等待领取，不表示已送到收件人家中。"}]}
+{"messages": [{"role": "user", "content": "字典中怎样安全读取可能不存在的键？"}, {"role": "assistant", "content": "可用 `value = mapping.get(key, default)` 提供默认值；若缺失本身需要区分，则先用 `if key in mapping` 判断。"}]}
+{"messages": [{"role": "user", "content": "请概括：实验中一组学生用纸质卡片记忆单词，另一组用手机应用。两组学习时间相同，测试成绩接近。"}, {"role": "assistant", "content": "在学习时间相同的实验中，纸卡和手机应用组的单词测试成绩接近。"}]}
+{"messages": [{"role": "user", "content": "什么是过拟合？"}, {"role": "assistant", "content": "过拟合是模型过度贴合训练样本中的细节或噪声，导致训练表现好、未见数据表现差。可用验证集监测，并通过正则化、早停或增加多样数据缓解。"}]}
+{"messages": [{"role": "user", "content": "怎样把字符串转成整数并处理非法输入？"}, {"role": "assistant", "content": "用 `int(text)` 转换，并捕获 `ValueError` 处理格式不合法的情况。不要仅靠字符串外观猜测转换一定成功。"}]}
+{"messages": [{"role": "user", "content": "用 JSON 表示两项任务：读书（已完成），写摘要（未完成）。"}, {"role": "assistant", "content": "{\"tasks\":[{\"name\":\"读书\",\"done\":true},{\"name\":\"写摘要\",\"done\":false}]}"}]}
+{"messages": [{"role": "user", "content": "文件必须先审核再发布。文件尚未审核，能否发布？"}, {"role": "assistant", "content": "不能。规则要求先审核后发布，尚未审核就不满足发布条件。"}]}
+{"messages": [{"role": "user", "content": "提取列出的两种水果及其价格：苹果每斤 6 元，梨每斤 5 元。"}, {"role": "assistant", "content": "苹果：6 元/斤；梨：5 元/斤。"}]}
+{"messages": [{"role": "user", "content": "冒泡排序为什么会逐渐把最大值移到末尾？"}, {"role": "assistant", "content": "每轮比较相邻元素并在逆序时交换，较大的元素会一步步向右移动，最终到达未排序区间末尾。"}]}
+{"messages": [{"role": "user", "content": "按“优点/限制”两行整理：步行无需燃料；雨天可能不便。"}, {"role": "assistant", "content": "优点：无需燃料\n限制：雨天可能不便"}]}
+{"messages": [{"role": "user", "content": "车票显示 16:20 发车，建议提前 30 分钟到站。建议几点到？"}, {"role": "assistant", "content": "建议不晚于 15:50 到站。"}]}
+{"messages": [{"role": "user", "content": "解方程 2x+5=17。"}, {"role": "assistant", "content": "两边减 5 得 2x=12，再除以 2，得到 x=6。"}]}
+{"messages": [{"role": "user", "content": "袋中有 4 个白棋子和 1 个黑棋子，不看颜色随机取一个。哪种颜色更可能？"}, {"role": "assistant", "content": "白色更可能，因为白棋子有 4 个，黑棋子只有 1 个。"}]}
+{"messages": [{"role": "user", "content": "盒中只有红球和蓝球。取出一个球不是红球，它是什么颜色？"}, {"role": "assistant", "content": "盒中只有红球和蓝球，既然不是红球，就一定是蓝球。"}]}
+{"messages": [{"role": "user", "content": "一件衣服先涨价 10%，再降价 10%，价格回到原价了吗？"}, {"role": "assistant", "content": "没有。若原价为 100，涨价后为 110，再降 10% 得 99，因此比原价低 1%。"}]}
+{"messages": [{"role": "user", "content": "请用一句话总结：博物馆给展品增加二维码，访客可以查看文字、音频和手语视频说明。"}, {"role": "assistant", "content": "博物馆通过二维码提供文字、音频和手语视频等多种展品说明。"}]}
+{"messages": [{"role": "user", "content": "用键值形式列出商品和库存：茶杯 12 个，水壶 5 个。"}, {"role": "assistant", "content": "茶杯：12 个\n水壶：5 个"}]}
+{"messages": [{"role": "user", "content": "公告说公园东门因施工关闭，西门正常开放。游客可以从哪里进入？"}, {"role": "assistant", "content": "可以从西门进入；东门因施工关闭。"}]}
+{"messages": [{"role": "user", "content": "请提炼主旨：研究团队比较了三种材料在相同温度下的保温性能，发现厚度和含水率都会改变测量结果。"}, {"role": "assistant", "content": "该研究在统一温度条件下比较材料保温性能，并指出厚度和含水率会影响结果。"}]}
+{"messages": [{"role": "user", "content": "如何公平比较两种压缩算法？"}, {"role": "assistant", "content": "使用相同输入数据和评价指标，固定软硬件与参数选择规则，并记录压缩率、耗时及重建质量。"}]}
+{"messages": [{"role": "user", "content": "提取订单的商品、数量和金额：林女士订购 3 本笔记本，共支付 45 元。"}, {"role": "assistant", "content": "商品：笔记本；数量：3 本；金额：45 元。"}]}
