@@ -1,4 +1,4 @@
-# Qwen2.5-0.5B 中文 SFT / LoRA / QLoRA 教学实验
+# Qwen2.5-0.5B 中文 SFT / LoRA / QLoRA 实验
 
 项目覆盖中文指令数据处理、assistant-only loss mask、LoRA/QLoRA 训练、adapter 推理及 held-out 对照。重点是学习和记录流程，不是产出高质量助手。
 
