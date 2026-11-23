@@ -29,7 +29,7 @@ python -m pip install --index-url https://download.pytorch.org/whl/cu128 torch==
 python -m pip install -r requirements.txt
 ```
 
-Base 不随仓库分发。本次为固定 revision 的 Qwen2.5-0.5B；服务器目录：`/data/shuaiz/models/Qwen2.5-0.5B-060db6499f32faf8b98477b0a26969ef7d8b9987`。迁移时下载同 revision，并修改两个 YAML 和 tokenize、inference、evaluation 脚本中的本地模型路径。revision 与哈希见环境报告。
+Base 不随仓库分发。本次为固定 revision 的 Qwen2.5-0.5B；
 
 ## 数据准备
 
@@ -64,7 +64,3 @@ python src/evaluation/evaluate.py
 ```
 
 交互模式支持 `:reset`、`:quit`；scale 在 0 到 1 之间。评估只输入测试问题，不把答案拼入 prompt；greedy、最多 96 个新 token。逐条结果见 `reports/generation_comparison.jsonl`。30 条测试题不足以支持广泛结论。
-
-## GitHub
-
-提交源码、配置、数据和报告。不要把 Base、adapter/checkpoint、tokenized 临时文件、密钥直接提交到普通 Git。发布模型权重前核对许可并考虑 Git LFS。根目录 `.gitignore` 已排除大文件与缓存。
